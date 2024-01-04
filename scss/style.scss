@@ -6,6 +6,187 @@ body{
   margin:0;
   padding:0;
   box-sizing: border-box;
-  background-color: lightblue;
-  font-size: 10px;
+  font-size: 15px;
+ 
+}
+
+.grid-container {
+  display:grid;
+  grid-template-columns: minmax(120px, 200px) minmax(240px, 1fr) 80px;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+  'burger burger burger'
+  'descriptions descriptions descriptions'
+  'images images images'
+  'footers footers footers'
+  ;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+
+}
+
+.menu {
+  display: grid;
+  height: 650px;
+  grid-template-columns: minmax(350px,auto) minmax(560px,auto);
+  grid-area: burger;
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/desktop/image-hero.jpg);
+  background-size: cover;
+  // height: 650px;
+  
+  
+  &__logo {
+    padding: 60px 0 135px 170px;
+  }
+  &__item-list {
+    display: grid;
+    grid-template-columns: minmax(20px,15%) minmax(20px,15%) minmax(20px,15%) minmax(20px,15%) minmax(20px,15%);
+    padding-top: 30px;
+    list-style: none;
+  }
+  &__item {
+   margin: 20px 0;
+
+  }
+  &__link {
+    display: block;
+    color: $main-white;
+    text-decoration: none;
+    font-family: $main-font;
+  }
+  &__slogan {
+    color: $main-white;
+    font-family: $second-font;
+    border: 2px solid $main-white;
+    font-size: 70px;
+    font-weight: 300;
+    margin: 0 0 138px 170px;
+    width: 560px;
+    padding: 39px 39px  5px 39px;
+  }
+}
+
+.description{
+  grid-area: descriptions;
+  position: relative;
+  margin: 160px 170px 60px 170px;
+  
+  &__content {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    width: 430px;
+    background-color: $main-white;
+    padding:125px 0 6px 100px; ; 
+  }
+
+  &__title {
+    font-family: $second-font;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0;  
+  }
+
+  &__text {
+    font-family: $second-font;
+    font-weight: bold;
+    color: $dark-gray;
+    line-height: 1.5; 
+  }
+}
+
+.gallery {
+  grid-area: images;
+  margin: 80px 170px 180px 170px; 
+  &__content{
+    display: grid;
+    grid-template-columns: 3fr 150px ;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 300;
+    font-size: 46px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  &__button {
+    background-color: $main-white;
+    color: $main-black;
+    font-family: $main-font;
+    letter-spacing: 2.5px;;
+    font-size: 15px;;
+    font-weight: 300;
+    padding: 8px 20px;
+    border-radius: 3px;  
+  }
+  &__image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    gap: 30px;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__image-component {
+    position: relative;
+  }
+  &__image-title {
+    position: absolute;
+    bottom: 0;
+    font-size: 30px;
+    font-family: $second-font;
+    font-weight: 300;
+    color: $main-white;
+    padding: 0 40px 0 40px;
+  }
+}
+
+.footer {
+  grid-area: footers;
+  background-color: $main-black;
+  &__logo-container {
+    margin: 45px 170px 0px 170px;
+    display: grid;
+    grid-template-columns: auto repeat(4, 40px);
+    
+  }
+
+  &__logo {
+    width: 140px;
+  
+  }
+  &__menu-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    margin: 0 170px 0 170px;
+  }
+  &__menu-item-list {
+    display: grid;
+    grid-template-columns:repeat(5, minmax(20px,80px) );
+    padding:0 ;
+    list-style: none;
+    
+  }
+  &__menu-item {
+   margin: 20px 0;
+
+  }
+  &__menu-link {
+    display: block;
+    color: $main-white;
+    text-decoration: none;
+    font-family: $main-font;
+  }
+  &__information {
+    color: $dark-gray;
+    font-family: $main-font;
+    
+  }
 }

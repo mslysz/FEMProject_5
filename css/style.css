@@ -4,6 +4,170 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: lightblue;
-  font-size: 10px;
+  font-size: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) minmax(240px, 1fr) 80px;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "burger burger burger" "descriptions descriptions descriptions" "images images images" "footers footers footers";
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.menu {
+  display: grid;
+  height: 650px;
+  grid-template-columns: minmax(350px, auto) minmax(560px, auto);
+  grid-area: burger;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/desktop/image-hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/desktop/image-hero.jpg);
+  background-size: cover;
+}
+.menu__logo {
+  padding: 60px 0 135px 170px;
+}
+.menu__item-list {
+  display: grid;
+  grid-template-columns: minmax(20px, 15%) minmax(20px, 15%) minmax(20px, 15%) minmax(20px, 15%) minmax(20px, 15%);
+  padding-top: 30px;
+  list-style: none;
+}
+.menu__item {
+  margin: 20px 0;
+}
+.menu__link {
+  display: block;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-family: "alata";
+}
+.menu__slogan {
+  color: hsl(0, 0%, 100%);
+  font-family: "josefin sans";
+  border: 2px solid hsl(0, 0%, 100%);
+  font-size: 70px;
+  font-weight: 300;
+  margin: 0 0 138px 170px;
+  width: 560px;
+  padding: 39px 39px 5px 39px;
+}
+
+.description {
+  grid-area: descriptions;
+  position: relative;
+  margin: 160px 170px 60px 170px;
+}
+.description__content {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  width: 430px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 125px 0 6px 100px;
+}
+.description__title {
+  font-family: "josefin sans";
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
+}
+.description__text {
+  font-family: "josefin sans";
+  font-weight: bold;
+  color: hsl(0, 0%, 55%);
+  line-height: 1.5;
+}
+
+.gallery {
+  grid-area: images;
+  margin: 80px 170px 180px 170px;
+}
+.gallery__content {
+  display: grid;
+  grid-template-columns: 3fr 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.gallery__title {
+  font-family: "josefin sans";
+  font-weight: 300;
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.gallery__button {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  font-family: "alata";
+  letter-spacing: 2.5px;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 8px 20px;
+  border-radius: 3px;
+}
+.gallery__image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  gap: 30px;
+}
+.gallery__image {
+  width: 100%;
+}
+.gallery__image-component {
+  position: relative;
+}
+.gallery__image-title {
+  position: absolute;
+  bottom: 0;
+  font-size: 30px;
+  font-family: "josefin sans";
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+  padding: 0 40px 0 40px;
+}
+
+.footer {
+  grid-area: footers;
+  background-color: hsl(0, 0%, 0%);
+}
+.footer__logo-container {
+  margin: 45px 170px 0px 170px;
+  display: grid;
+  grid-template-columns: auto repeat(4, 40px);
+}
+.footer__logo {
+  width: 140px;
+}
+.footer__menu-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 170px 0 170px;
+}
+.footer__menu-item-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(20px, 80px));
+  padding: 0;
+  list-style: none;
+}
+.footer__menu-item {
+  margin: 20px 0;
+}
+.footer__menu-link {
+  display: block;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-family: "alata";
+}
+.footer__information {
+  color: hsl(0, 0%, 55%);
+  font-family: "alata";
 }/*# sourceMappingURL=style.css.map */

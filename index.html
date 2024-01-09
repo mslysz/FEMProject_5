@@ -13,12 +13,43 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="menu__onoff">
+      <img
+        class="menu__onoff-logo"
+        src="/images/logo.svg"
+        alt="loopstudios-logo"
+      />
+      <img
+        class="menu__onoff-icon"
+        src="/images/icon-close.svg"
+        alt="close-icon"
+      />
+      <ul class="menu__onoff-list">
+        <li class="menu__onoff-item">
+          <a class="menu__onoff-link" href="">About</a>
+        </li>
+        <li class="menu__onoff-item">
+          <a class="menu__onoff-link" href="">Careers</a>
+        </li>
+        <li class="menu__onoff-item">
+          <a class="menu__onoff-link" href="">Events</a>
+        </li>
+        <li class="menu__onoff-item">
+          <a class="menu__onoff-link" href="">Products</a>
+        </li>
+        <li class="menu__onoff-item">
+          <a class="menu__onoff-link" href="">Support</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="grid-container">
-      <nav class="menu menu--horizontal menu--burger">
+      <nav class="menu menu--burger">
+        <img class="menu__logo" src="/images/logo.svg" alt="loopstudios-logo" />
         <img
-          class="menu__logo menu__logo--burger"
-          src="/images/logo.svg"
-          alt="loopstudios-logo"
+          class="menu__burger"
+          src="/images/icon-hamburger.svg"
+          alt="hamburger-menu-img"
         />
         <ul class="menu__item-list menu__item-list--burger">
           <li class="menu__item"><a class="menu__link" href="">About</a></li>
@@ -52,67 +83,147 @@
         </div>
         <div class="gallery__image-container">
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-deep-earth.jpg"
-              alt="deep-earth"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-deep-earth-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-deep-earth.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-deep-earth.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">DEEP EARTH</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-night-arcade.jpg"
-              alt="night-arcade"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-night-arcade-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-night-arcade.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-night-arcade.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">NIGHT ARCADE</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-soccer-team.jpg"
-              alt="soccer-team-vr"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-soccer-team-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-soccer-team.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-soccer-team.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">SOCCER TEAM VR</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-grid.jpg"
-              alt="the-grid"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-grid-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-grid.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-grid.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">THE GRID</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-from-above.jpg"
-              alt="from-up-above-vr"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-from-above-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-from-above.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-from-above.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">FROM UP ABOVE VR</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-pocket-borealis.jpg"
-              alt="pocket-borealis"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-pocket-borealis-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-pocket-borealis.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-pocket-borealis.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">POCKET BOREALIS</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-curiosity.jpg"
-              alt="the-curiosity"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-curiosity-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-curiosity.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-curiosity.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">THE CURIOSITY</p>
           </div>
           <div class="gallery__image-component">
-            <img
-              class="gallery__image"
-              src="/images/desktop/image-fisheye.jpg"
-              alt="make-it-fisheye"
-            />
+            <picture>
+              <source
+                media="(max-width:600px)"
+                srcset="/images/mobile/image-fisheye-mobile.jpg"
+              />
+              <source
+                media="(min-width:601px)"
+                srcset="/images/desktop/image-fisheye.jpg"
+              />
+              <img
+                class="gallery__image"
+                src="/images/desktop/image-fisheye.jpg"
+                alt="deep-earth"
+              />
+            </picture>
             <p class="gallery__image-title">MAKE IT FISHEYE</p>
           </div>
         </div>
@@ -124,11 +235,30 @@
             src="/images/logo.svg"
             alt="loopstudios-logo"
           />
-          <img class="footer__social" src="/images/icon-facebook.svg" />
-          <img class="footer__social" src="/images/icon-twitter.svg" />
-          <img class="footer__social" src="/images/icon-pinterest.svg" />
-          <img class="footer__social" src="/images/icon-instagram.svg" />
         </div>
+        <div class="footer__social-container">
+          <img
+            class="footer__social"
+            src="/images/icon-facebook.svg"
+            alt="icon-facebook"
+          />
+          <img
+            class="footer__social"
+            src="/images/icon-twitter.svg"
+            alt="icon-twitter"
+          />
+          <img
+            class="footer__social"
+            src="/images/icon-pinterest.svg"
+            alt="icon-pinterest"
+          />
+          <img
+            class="footer__social"
+            src="/images/icon-instagram.svg"
+            alt="icon-instagram"
+          />
+        </div>
+
         <div class="footer__menu-container">
           <ul class="footer__menu-item-list">
             <li class="footer__menu-item">
@@ -147,11 +277,12 @@
               <a class="footer__menu-link" href="">Support</a>
             </li>
           </ul>
-          <p class="footer__information">
-            © 2021 Loopstudios. All rights reserved.
-          </p>
         </div>
+        <address class="footer__information">
+          © 2021 Loopstudios. All rights reserved.
+        </address>
       </footer>
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>

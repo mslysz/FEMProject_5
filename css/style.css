@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
-html {
-  overflow-x: hidden;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +15,11 @@ body {
   max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
+}
+@media screen and (max-width: 790px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 .menu {
